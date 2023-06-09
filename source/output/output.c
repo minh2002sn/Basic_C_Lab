@@ -47,5 +47,7 @@ int output_handle(uint8_t num_people)
         (h_someone + i)->action(p_h_output_file);
     }
 
+    fclose(p_h_output_file);
+
     return 0;
 }
