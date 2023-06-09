@@ -12,7 +12,7 @@ void input_handle(int *p_num_people)
 {
     do
     {
-        printf("Type number of people: ");
+        printf("Type number of people (0-255): ");
         scanf("%d", p_num_people);
     } while(*p_num_people < 0 || *p_num_people > 255);
 }
