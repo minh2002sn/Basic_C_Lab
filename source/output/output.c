@@ -22,7 +22,6 @@ int output_handle(uint8_t num_people)
         num_people = MAX_PEOPLE;
 
     /* Initialization */
-    srand(time(NULL));
     someone_t h_someone[num_people];
 
     /* Open output.txt file */
@@ -41,7 +40,7 @@ int output_handle(uint8_t num_people)
     fprintf(p_h_output_file, "No.\tType\tAction\n");
     for(int i = 0; i < num_people; i++)
     {
-        /* Random type for every person */
+        /* Random type for every people */
         someone_init(h_someone + i, rand() % 3);
         fprintf(p_h_output_file, "%d\t%d\t", i, (h_someone +i)->type);
         (h_someone + i)->action(p_h_output_file);

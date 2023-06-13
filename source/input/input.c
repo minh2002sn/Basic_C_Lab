@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "input.h"
 
 /* Max number of people */
@@ -10,9 +12,6 @@
  */
 void input_handle(int *p_num_people)
 {
-    do
-    {
-        printf("Type number of people (0-255): ");
-        scanf("%d", p_num_people);
-    } while(*p_num_people < 0 || *p_num_people > 255);
+    /* Random number of people in range 0 - 255 */
+    *p_num_people = rand() % MAX_PEOPLE;
 }

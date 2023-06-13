@@ -1,10 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "main.h"
 #include "input.h"
 #include "output.h"
 
 int main()
 {
+    /* Initialization for random function */
+    srand(time(NULL));
+
     /* Variable holds number of people */
     int num_people = 0;
 
