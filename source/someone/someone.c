@@ -19,7 +19,7 @@ static void stole(FILE *p_h_file);
 static void work(FILE *p_h_file);
 
 /* Function pointer array, pointing to action functions */
-static action_t G_ACTION[3] =
+static const action_t G_ACTION[3] =
 {
     cadge,
     stole,
