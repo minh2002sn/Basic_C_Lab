@@ -8,32 +8,19 @@
 #include <sys/stat.h>
 
 /*
- * @brief   type_t enumeration definition
- */
-typedef enum
-{
-    ANXIN,
-    ANTROM,
-    CONGNHAN,
-} type_t;
-
-/*
- * @brief   action_t function pointer definition
+ * @brief   action_t function pointer data type definition
  */
 typedef void (*action_t)(FILE *);
 
 /*
- * @brief   someone_t structure definition
+ * @brief   type_t data type declaration
  */
-typedef struct
-{
-    // Public
-    type_t type;
+typedef enum type_t type_t;
 
-    // Private
-    const void *income;
-    action_t action;
-} someone_t;
+/*
+ * @brief   someone_t data type declaration
+ */
+typedef struct someone_t someone_t;
 
 void someone_init(someone_t *p_h_someone, type_t type);
 void someone_print_income(someone_t *p_h_someone);

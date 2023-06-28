@@ -21,20 +21,26 @@ OBJ_FOLDER = $(patsubst $(SRC_DIR)/%, $(OBJ_DIR)/%, $(wildcard $(SRC_DIR)/*))
 
 # Compler
 CC			=	gcc
+
 # Remove command
 RM			=	rm -r
+
 # Flag for C compiler
 CFLAGS		=	-Wall
+
 # Flag to preprocessor
 # "-I" + "[directory]"	=> Find header file in [directory]
-#	Ex: -Iinclude		=> Find header file in folder name "include"
+#	E.g. -Iinclude		=> Find header file in folder name "include"
 # CPPFLAGS	=	-Iinclude
 CPPFLAGS	=	$(patsubst $(INC_DIR)/%, -I$(INC_DIR)/%, $(INC))
+
 # Flag for linker
-# "-L" + "directory"	=> Finc libraries in [directory]
-#	Ex: -Llib			=> Find libraries in folder name "lib"
+# "-L" + "directory"	=> Find libraries in [directory]
+#	E.g. -Llib			=> Find libraries in folder name "lib"
 #LDFLAGS		:=	-Llib
-#LDLIBS		:=	-lm
+# "-l" + "lib_name"		=> Link the library with other object files
+#	E.g. -lfunc			=> Link the libfunc library with other object files
+#LDLIBS		:=	-l
 
 # Rule running code
 run: build

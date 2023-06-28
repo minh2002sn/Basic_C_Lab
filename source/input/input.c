@@ -4,7 +4,7 @@
 #include "input.h"
 
 /* Max number of people */
-#define MAX_PEOPLE      255
+#define MAX_PEOPLE      (255)
 
 /*
  * @brief   Receive number of people from user

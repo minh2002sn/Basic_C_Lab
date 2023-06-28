@@ -2,6 +2,26 @@
 #include <stdint.h>
 #include "someone.h"
 
+/*
+ * @brief   type_t enumeration definition
+ */
+enum type_t
+{
+    ANXIN,
+    ANTROM,
+    CONGNHAN,
+};
+
+/*
+ * @brief   someone_t structure definition
+ */
+struct someone_t
+{
+    type_t type;
+    const void *income;
+    action_t action;
+};
+
 /* Salary of CONGNHAN type people */
 static const uint32_t G_SALARY = 500000;
 
